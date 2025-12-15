@@ -30,7 +30,7 @@ jobs:
         run: go test ./...
 
       - name: Generate docs
-        run: ./scripts/generate-docs.sh
+        run: bash ./scripts/generate-docs.sh
 
       - name: Verify generated docs are committed
         run: |

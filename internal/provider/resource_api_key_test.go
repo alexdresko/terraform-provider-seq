@@ -20,21 +20,13 @@ func TestClientAddsAPIKeyHeader(t *testing.T) {
 	}))
 	defer srv.Close()
 
-	c := &Client{baseURL: mustParseURL(t, srv.URL), apiKey: "abc", http: srv.Client()}
+	c := &Client{baseURL: mustParseURL(srv.URL), apiKey: "abc", http: srv.Client()}
 	if err := c.Ping(context.Background()); err != nil {
 		t.Fatalf("Ping() error: %v", err)
 	}
 	if got != "abc" {
 		t.Fatalf("expected X-Seq-ApiKey header to be set, got %q", got)
 	}
-}
-
-func mustParseURL(t *testing.T, raw string) *url.URL {
-	u, err := url.Parse(raw)
-	if err != nil {
-		t.Fatal(err)
-	}
-	return u
 }
 
 func TestAPIKeyRequestBody(t *testing.T) {

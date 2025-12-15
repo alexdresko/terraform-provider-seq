@@ -8,7 +8,7 @@ This repo includes a VS Code devcontainer that starts:
 ## Quick start
 
 1. In VS Code: **Dev Containers: Reopen in Container**
-2. Seq will be available at http://localhost:5341 (forwarded automatically)
+2. Seq will be available at http://localhost:5342 (forwarded automatically)
 3. Sign in with:
    - username: `admin`
    - password: `admin`

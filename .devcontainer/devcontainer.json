@@ -21,10 +21,10 @@
     }
   },
   "forwardPorts": [
-    5341
+    5342
   ],
   "portsAttributes": {
-    "5341": {
+    "5342": {
       "label": "Seq UI/API",
       "onAutoForward": "openBrowser"
     }

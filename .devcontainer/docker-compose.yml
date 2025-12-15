@@ -19,8 +19,8 @@ services:
       # Dev-only admin password (user: admin)
       SEQ_PASSWORD: "admin"
     ports:
-      # Map Seq UI/API (container :80) to host :5341 to match common local Seq defaults.
-      - "5341:80"
+      # Map Seq UI/API (container :80) to host :5342 (5341 may be reserved on some Windows setups).
+      - "5342:80"
     volumes:
       - seq-data:/data
 

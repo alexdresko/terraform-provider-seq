@@ -3,12 +3,13 @@ package provider
 import (
 	"context"
 
+	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
+	frameworkvalidator "github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 )
 
@@ -54,9 +55,9 @@ func (p *SeqProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *
 		Description: "Terraform provider for managing Seq resources via the Seq HTTP API.",
 		Attributes: map[string]schema.Attribute{
 			"server_url": schema.StringAttribute{
-				Description: "Base URL for the Seq server, e.g. https://seq.example.com or http://localhost:5341. Can be set via SEQ_SERVER_URL.",
+				Description: "Base URL for the Seq server, e.g. https://seq.example.com or http://localhost:5342. Can be set via SEQ_SERVER_URL.",
 				Optional:    true,
-				Validators: []schema.StringValidator{
+				Validators: []frameworkvalidator.String{
 					stringvalidator.LengthAtLeast(1),
 				},
 			},

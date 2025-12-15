@@ -20,7 +20,7 @@ Seq API documentation:
 This repo includes a devcontainer that starts Seq in Docker alongside the development environment.
 
 - Dev container docs: [.devcontainer/README.md](.devcontainer/README.md)
-- Seq UI/API (host): `http://localhost:5341`
+- Seq UI/API (host): `http://localhost:5342`
 - Seq URL from inside the devcontainer: `http://seq:80`
 
 ### Build
@@ -42,7 +42,7 @@ Open the Command Palette → **Tasks: Run Task**:
 
 ```hcl
 provider "seq" {
-  server_url = "http://localhost:5341"
+  server_url = "http://localhost:5342"
   api_key    = var.seq_api_key
 }
 ```

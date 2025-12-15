@@ -50,7 +50,7 @@ func NewClientFromConfig(ctx context.Context, cfg SeqProviderModel) (*Client, di
 		return nil, diags
 	}
 	if parsed.Scheme == "" || parsed.Host == "" {
-		diags.AddError("Invalid server_url", "server_url must include scheme and host, e.g. http://localhost:5341")
+		diags.AddError("Invalid server_url", "server_url must include scheme and host, e.g. http://localhost:5342")
 		return nil, diags
 	}
 

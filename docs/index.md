@@ -16,7 +16,7 @@ The provider authenticates using a Seq API key sent via the `X-Seq-ApiKey` heade
 
 ```terraform
 provider "seq" {
-  server_url = "http://localhost:5341"
+  server_url = "http://localhost:5342"
   api_key    = var.seq_api_key
 }
 

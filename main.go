@@ -10,6 +10,8 @@ import (
 	"github.com/example/terraform-provider-seq/internal/provider"
 )
 
+var version = "dev"
+
 // terraform-provider-seq entrypoint.
 func main() {
 	var debug bool
@@ -21,7 +23,7 @@ func main() {
 		Debug:   debug,
 	}
 
-	if err := providerserver.Serve(context.Background(), provider.New, opts); err != nil {
+	if err := providerserver.Serve(context.Background(), provider.New(version), opts); err != nil {
 		log.Fatal(err)
 	}
 }

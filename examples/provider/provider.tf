@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "seq" {
-  server_url = "http://localhost:5341"
+  server_url = "http://localhost:5342"
   api_key    = "REDACTED"
 }
 
